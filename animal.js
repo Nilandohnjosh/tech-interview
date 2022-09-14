@@ -1,10 +1,3 @@
-const fibo = (x) => {
-  if (x === 0 || x === 1) {
-    return x
-  }
-  return fibo(x - 1) + fibo(x - 2)
-}
-
 class Animal {
   constructor(age) {
     this.age = age
@@ -15,11 +8,12 @@ class Animal {
   }
 
   isBaby() {
-    return this.age < 1 ? true : false
+    this.age < 1 ? true : false
   }
 }
 // created cat object
 const cat = new Animal(0)
+console.log(cat)
 
 class Dogs extends Animal {
   constructor(age, color) {
@@ -42,5 +36,3 @@ const dogs = [dog, dog2, dog3]
 
 // goes through the dogs array and filtered out all dogs with age < 1
 const babyDog = dogs.filter((dog) => dog.age < 1)
-
-module.exports = fibo
